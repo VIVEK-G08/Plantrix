@@ -930,7 +930,7 @@ export default function Dashboard() {
                 icon="🌱"
                 label="Soil Moisture"
                 value={sensorData ? `${getSoilPercent(sensorData.soil)}%` : "--"}
-                unit={sensorData ? `(${sensorData.soil}/4095 ADC)` : ""}
+                unit={sensorData ? `(ADC: ${sensorData.soil})` : ""}
                 progress={sensorData ? getSoilPercent(sensorData.soil) : 0}
                 status={sensorData ? getSoilStatus(sensorData.soil) : null}
                 color="bg-blue-500"

@@ -162,7 +162,7 @@ Current Plant Context:`
     if (sensorData) {
       systemPrompt += `\n- Current Temperature: ${sensorData.temperature}°C
 - Humidity: ${sensorData.humidity}%
-- Soil Moisture: ${sensorData.soil_moisture}%
+- Soil Moisture: ${sensorData.soil_moisture !== null ? (100 - ((sensorData.soil_moisture / 4095) * 100)).toFixed(1) : 'N/A'}%
 - Light Intensity: ${sensorData.light_intensity} lux`
     }
 
