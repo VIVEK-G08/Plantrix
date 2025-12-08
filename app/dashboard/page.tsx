@@ -490,7 +490,7 @@ export default function Dashboard() {
 
   // Convert raw 0-4095 ADC soil value into an approximate moisture percentage
   const getSoilPercent = (raw: number) => {
-    const percent = ((4095 - raw) / 4095) * 100
+    const percent = 100 - ((raw / 4095) * 100)
     return Math.round(Math.max(0, Math.min(100, percent)))
   }
 

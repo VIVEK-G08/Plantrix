@@ -104,7 +104,7 @@ export default function AIAssistant() {
           try {
             if (latestSensor && typeof window !== "undefined" && "geolocation" in navigator && !weatherFetchedRef.current) {
               const soilPercent: number | null =
-                typeof latestSensor.soil_moisture === "number" ? latestSensor.soil_moisture : null
+                typeof latestSensor.soil_moisture === "number" ? 100 - ((latestSensor.soil_moisture / 4095) * 100) : null
 
               if (soilPercent != null) {
                 navigator.geolocation.getCurrentPosition(
