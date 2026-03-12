@@ -146,7 +146,7 @@ export default function AIAssistant() {
     const { GoogleGenerativeAI } = require("@google/generative-ai")
     const genAI = new GoogleGenerativeAI(apiKey)
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-2.0-flash-exp",
+      model: "gemini-2.5-flash",
       generationConfig: {
         maxOutputTokens: 1000,
         temperature: 0.7,
@@ -322,7 +322,7 @@ Current Plant Context:`
               </div>
               <div>
                 <h2 className="font-bold text-slate-900 text-lg">Blossom AI</h2>
-                <p className="text-xs text-slate-500">Powered by Gemini 2.0 Flash • Online ✓</p>
+                <p className="text-xs text-slate-500">Powered by Gemini 2.5 Flash • Online ✓</p>
               </div>
             </div>
             <button
